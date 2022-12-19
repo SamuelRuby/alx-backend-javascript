@@ -1,10 +1,6 @@
+//  function named iterateThroughObject. The function’s parameter
+// reportWithIterator is the return value from createIteratorObject.
+// return every employee name in a string, separated by |
 export default function iterateThroughObject(reportWithIterator) {
-  const employees = [];
-
-  for (const employee of reportWithIterator) {
-    employees.push(employee);
-  }
-
-  return employees.join(' | ');
+  return reportWithIterator.join(' | ');
 }
-
