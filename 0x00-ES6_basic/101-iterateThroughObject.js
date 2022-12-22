@@ -1,6 +1,10 @@
-//  function named iterateThroughObject. The function’s parameter
-// reportWithIterator is the return value from createIteratorObject.
-// return every employee name in a string, separated by |
 export default function iterateThroughObject(reportWithIterator) {
-  return reportWithIterator.join(' | ');
+  let n = reportWithIterator.next();
+  let res = '';
+
+  while (!n.done) {
+    res += `${n.value} | `;
+    n = reportWithIterator.next();
+  }
+  return res.slice(0, res.length - 3);
 }
